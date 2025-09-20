@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chọn ngẫu nhiên món quà</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+    button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+    h1 { color: #e91e63; }
+    #result { font-size: 20px; margin-top: 20px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>🎁 Máy chọn quà ngẫu nhiên 🎁</h1>
+  <button onclick="chonQua()">Chọn quà</button>
+  <div id="result"></div>
+
+  <script>
+    const qua = [
+      "Gấu bông 🧸",
+      "Sách 📚",
+      "Kẹo 🍬",
+      "Hoa 🌹",
+      "Voucher 🎟️",
+      "Áo thun 👕",
+      "Tai nghe 🎧"
+    ];
+
+    function chonQua() {
+      const randomIndex = Math.floor(Math.random() * qua.length);
+      document.getElementById("result").innerText = "Bạn nhận được: " + qua[randomIndex];
+    }
+  </script>
+</body>
+</html>
